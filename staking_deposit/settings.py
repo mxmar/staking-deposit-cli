@@ -10,12 +10,28 @@ class BaseChainSetting(NamedTuple):
     GENESIS_VALIDATORS_ROOT: bytes
 
 
+LUKSO = 'lukso'
+LUKSO_TESTNET = 'lukso-testnet'
+LUKSO_DEVNET = 'lukso-devnet'
 MAINNET = 'mainnet'
 GOERLI = 'goerli'
 PRATER = 'prater'
 SEPOLIA = 'sepolia'
 ZHEJIANG = 'zhejiang'
 HOLESKY = 'holesky'
+
+# LUKSO mainnet setting
+LUKSOSetting = BaseChainSetting(
+    NETWORK_NAME=LUKSO, GENESIS_FORK_VERSION=bytes.fromhex('42000001'),
+    GENESIS_VALIDATORS_ROOT=bytes.fromhex('a27edd68cde5c396f499157945d062a010308ce5ed5719a6b1e12ad2a51b97e6'))
+# LUKSO testnet setting
+LUKSOTestnetSetting = BaseChainSetting(
+    NETWORK_NAME=LUKSO_TESTNET, GENESIS_FORK_VERSION=bytes.fromhex('42010001'),
+    GENESIS_VALIDATORS_ROOT=bytes.fromhex('341d6608917174b97bac3e45d080e8115cccb39b9d5a2ee18136600ab7336442'))
+# LUKSO devnet setting
+LUKSODevnetSetting = BaseChainSetting(
+    NETWORK_NAME=LUKSO_DEVNET, GENESIS_FORK_VERSION=bytes.fromhex('74200001'),
+    GENESIS_VALIDATORS_ROOT=bytes.fromhex('d7cc24d150c617450dfa8176ef45a01dadb885a75a1a4c32d4a6828f8f088760'))
 
 # Mainnet setting
 MainnetSetting = BaseChainSetting(
@@ -40,6 +56,9 @@ HoleskySetting = BaseChainSetting(
 
 
 ALL_CHAINS: Dict[str, BaseChainSetting] = {
+    LUKSO: LUKSOSetting,
+    LUKSO_TESTNET: LUKSOTestnetSetting,
+    LUKSO_DEVNET: LUKSODevnetSetting,
     MAINNET: MainnetSetting,
     GOERLI: GoerliSetting,
     PRATER: GoerliSetting,  # Prater is the old name of the Prater/Goerli testnet
@@ -49,7 +68,7 @@ ALL_CHAINS: Dict[str, BaseChainSetting] = {
 }
 
 
-def get_chain_setting(chain_name: str = MAINNET) -> BaseChainSetting:
+def get_chain_setting(chain_name: str = LUKSO) -> BaseChainSetting:
     return ALL_CHAINS[chain_name]
 
 
