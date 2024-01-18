@@ -32,6 +32,7 @@ def load_mnemonic_arguments_decorator(function: Callable[..., Any]) -> Callable[
         jit_option(
             callback=validate_mnemonic,
             help=lambda: load_text(['arg_mnemonic', 'help'], func='existing_mnemonic'),
+            hidden=True,
             param_decls='--mnemonic',
             prompt=lambda: load_text(['arg_mnemonic', 'prompt'], func='existing_mnemonic'),
             type=str,
