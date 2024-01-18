@@ -14,9 +14,9 @@ async def main(argv):
         os.mkdir(my_folder_path)
 
     if os.name == 'nt':  # Windows
-        run_script_cmd = ".\\" + binary_file_path + '\deposit.exe'
+        run_script_cmd = ".\\" + binary_file_path + '\lukso-key-gen.exe'
     else:  # Mac or Linux
-        run_script_cmd = './' + binary_file_path + '/deposit'
+        run_script_cmd = './' + binary_file_path + '/lukso-key-gen'
 
     cmd_args = [
         run_script_cmd,

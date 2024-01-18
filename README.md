@@ -217,7 +217,7 @@ python3 setup.py install
 Or use the helper script:
 
 ```sh
-./deposit.sh install
+./lukso-key-gen.sh install
 ```
 
 ##### Step 2. Create keys and `deposit_data-*.json`
@@ -225,23 +225,23 @@ Or use the helper script:
 Run one of the following command to enter the interactive CLI:
 
 ```sh
-./deposit.sh new-mnemonic
+./lukso-key-gen.sh new-mnemonic
 ```
 
 or
 
 ```sh
-./deposit.sh existing-mnemonic
+./lukso-key-gen.sh existing-mnemonic
 ```
 
 You can also run the tool with optional arguments:
 
 ```sh
-./deposit.sh new-mnemonic --num_validators=<NUM_VALIDATORS> --mnemonic_language=english --chain=<CHAIN_NAME> --folder=<YOUR_FOLDER_PATH>
+./lukso-key-gen.sh new-mnemonic --num_validators=<NUM_VALIDATORS> --mnemonic_language=english --chain=<CHAIN_NAME> --folder=<YOUR_FOLDER_PATH>
 ```
 
 ```sh
-./deposit.sh existing-mnemonic --num_validators=<NUM_VALIDATORS> --validator_start_index=<START_INDEX> --chain=<CHAIN_NAME> --folder=<YOUR_FOLDER_PATH>
+./lukso-key-gen.sh existing-mnemonic --num_validators=<NUM_VALIDATORS> --validator_start_index=<START_INDEX> --chain=<CHAIN_NAME> --folder=<YOUR_FOLDER_PATH>
 ```
 
 ###### Language Argument
@@ -435,7 +435,7 @@ python setup.py install
 Or use the helper script:
 
 ```sh
-sh deposit.sh install
+sh lukso-key-gen.sh install
 ```
 
 ##### Step 2. Create keys and `deposit_data-*.json`
@@ -443,23 +443,23 @@ sh deposit.sh install
 Run one of the following command to enter the interactive CLI:
 
 ```sh
-./deposit.sh new-mnemonic
+./lukso-key-gen.sh new-mnemonic
 ```
 
 or
 
 ```sh
-./deposit.sh existing-mnemonic
+./lukso-key-gen.sh existing-mnemonic
 ```
 
 You can also run the tool with optional arguments:
 
 ```sh
-./deposit.sh new-mnemonic --num_validators=<NUM_VALIDATORS> --mnemonic_language=english --chain=<CHAIN_NAME> --folder=<YOUR_FOLDER_PATH>
+./lukso-key-gen.sh new-mnemonic --num_validators=<NUM_VALIDATORS> --mnemonic_language=english --chain=<CHAIN_NAME> --folder=<YOUR_FOLDER_PATH>
 ```
 
 ```sh
-./deposit.sh existing-mnemonic --num_validators=<NUM_VALIDATORS> --validator_start_index=<START_INDEX> --chain=<CHAIN_NAME> --folder=<YOUR_FOLDER_PATH>
+./lukso-key-gen.sh existing-mnemonic --num_validators=<NUM_VALIDATORS> --validator_start_index=<START_INDEX> --chain=<CHAIN_NAME> --folder=<YOUR_FOLDER_PATH>
 ```
 
 ###### Language Argument

@@ -272,9 +272,9 @@ async def test_script_bls_withdrawal() -> None:
         os.mkdir(my_folder_path)
 
     if os.name == 'nt':  # Windows
-        run_script_cmd = 'sh deposit.sh'
+        run_script_cmd = 'sh lukso-key-gen.sh'
     else:  # Mac or Linux
-        run_script_cmd = './deposit.sh'
+        run_script_cmd = './lukso-key-gen.sh'
 
     install_cmd = run_script_cmd + ' install'
     proc = await asyncio.create_subprocess_shell(
@@ -356,9 +356,9 @@ async def test_script_abbreviated_mnemonic() -> None:
         os.mkdir(my_folder_path)
 
     if os.name == 'nt':  # Windows
-        run_script_cmd = 'sh deposit.sh'
+        run_script_cmd = 'sh lukso-key-gen.sh'
     else:  # Mac or Linux
-        run_script_cmd = './deposit.sh'
+        run_script_cmd = './lukso-key-gen.sh'
 
     install_cmd = run_script_cmd + ' install'
     proc = await asyncio.create_subprocess_shell(
