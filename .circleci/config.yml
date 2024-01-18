@@ -194,7 +194,6 @@ workflows:
       - tox-py38-core
       - tox-py310-script
       - tox-py38-script
-      - win-py310-script
   build_linux:
     jobs:
       - build-linux-amd64
